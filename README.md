@@ -29,15 +29,3 @@ Then open Claude Code in your project and type:
 or just ask: « is my app ready for production? »
 
 Other agents that read `SKILL.md` files (Codex, Cursor…) can use `skills/ship-check/SKILL.md` too.
-
-## نسخة تونسي
-
-ثبّتو، حلّ Claude Code في الـ projet متاعك واكتب `/ship-check`.
-يقرا الـ projet متاعك، يعدّي 15 test ويعطيك Ship Score على 100، وما يبدّل حتى شي كان كي تقلّو إنت.
-
-## Why
-
-My startup had no database backup until the day I prepared the repo for new developers.
-These are the 10 things we check now before every deploy at reservations.tn.
-
-— Baha Eddin Mselmi
