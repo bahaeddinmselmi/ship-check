@@ -1,9 +1,16 @@
 # ship-check
 
 A Claude Code skill that checks if your AI-built app is ready for production.
-It reads your project and scores 10 points: backups (and a tested restore), secrets in the code, CI, safe mode for
-messages and payments, fake data in dev, migrations, after-deploy checks, rollback and alerts.
-It **changes nothing** until you choose a fix.
+It reads your project, runs 15 checks and gives you a **Ship Score out of 100**:
+
+- **Can you lose data or leak it?** backups and a tested restore · users seeing each other's data (server checks,
+  Supabase RLS, Firebase rules) · secrets in the code, the git history or the browser
+- **Can you lose money or customers?** payments and webhooks · AI/API bills · emails/SMS sent from dev · fake data in dev ·
+  error leaks · fake or vulnerable packages · upload limits
+- **Can you ship and recover calmly?** no coding on the server · CI · migrations · after-deploy check · rollback and alerts
+
+Works with Supabase, Firebase, Vercel, Netlify, or your own server. It **changes nothing** until you choose a fix.
+It is not a full security audit.
 
 ## Install (1 minute)
 
@@ -25,8 +32,8 @@ Other agents that read `SKILL.md` files (Codex, Cursor…) can use `skills/ship-
 
 ## نسخة تونسي
 
-ثبّتها، حلّ Claude Code في الـ projet متاعك واكتب `/ship-check`.
-تقرا الـ projet متاعك، تعطيك 10 نقاط بـ PASS / WARN / FAIL، وما تبدّل حتى شي كان كي تقلها إنت.
+ثبّتو، حلّ Claude Code في الـ projet متاعك واكتب `/ship-check`.
+يقرا الـ projet متاعك، يعدّي 15 test ويعطيك Ship Score على 100، وما يبدّل حتى شي كان كي تقلّو إنت.
 
 ## Why
 
